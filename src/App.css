@@ -641,7 +641,14 @@ position: relative;
     background-color: rgb(254, 254, 91);
 }
 
-.paginated .btn{
+.btns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7px;
+}
+
+.btn{
     width: fit-content;
     display: flex;
     justify-content: center;
@@ -649,9 +656,17 @@ position: relative;
     background-color: darkred;
     color: wheat;
     margin: 0 5px;
+    padding: 7px 5px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border: none;
+    cursor: pointer;
 }
 
-.paginated .btn:hover{
+.btn:hover{
     background-color: rgb(194, 0, 0);
     color: wheat;
 }

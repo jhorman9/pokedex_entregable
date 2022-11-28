@@ -30,11 +30,6 @@ const Pokedex = () => {
         for(let i= 1; i<= totalPage; i++){
         numbers.push(i)
         }
-
-        const onBasicPageChange = (event) => {
-            setPokemonPerPage(event.rows);
-            console.log(event);
-          };
     
         /*------------------ */
 
@@ -112,10 +107,12 @@ const Pokedex = () => {
                     ))}
                 </ul>
                 <div className='paginated'>
-                    <button className='btn prev-page' onClick={() => setPage(page-1)} disabled={page <= 1}>Prev Page</button>
                     {numbers.map(total => (
-                        <button key={total} onClick={() => setPage(total)}><Pagination count={total} defaultPage={6} siblingCount={0} />                        </button>
-                    ))}
+                        <button key={total} onClick={() => setPage(total)}>{total}</button>
+                        ))}
+                </div>
+                <div className='btns'>
+                    <button className='btn prev-page' onClick={() => setPage(page-1)} disabled={page <= 1}>Prev Page</button>
                     <button className='btn next-page' onClick={() => setPage(page+1)} disabled={page >= totalPage}>Next Page</button>
                 </div>
             </div>
